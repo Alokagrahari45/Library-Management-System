@@ -1,0 +1,53 @@
+# Sample Test Data
+
+Use this data to quickly demonstrate every feature during your viva/demo.
+
+## Step 1 — Add these books (Add Book screen)
+
+| Book ID | Title | Author | Publisher | Total Copies |
+|---|---|---|---|---|
+| 101 | The Alchemist | Paulo Coelho | HarperOne | 2 |
+| 102 | Clean Code | Robert C. Martin | Prentice Hall | 1 |
+| 103 | Introduction to Algorithms | Cormen, Leiserson, Rivest, Stein | MIT Press | 3 |
+| 104 | Data Structures Using C | Reema Thareja | Oxford University Press | 2 |
+| 105 | Wings of Fire | A.P.J. Abdul Kalam | Universities Press | 1 |
+
+## Step 2 — Try Search
+
+- Search **By ID**: `103` → should return "Introduction to Algorithms"
+- Search **By Title**: `data` → should return "Data Structures Using C"
+- Search **By Author**: `kalam` → should return "Wings of Fire"
+
+## Step 3 — Issue books (demonstrate the Queue / waiting list)
+
+| Book ID | Student Name | Roll No. | Expected Result |
+|---|---|---|---|
+| 102 | Aman Sharma | CS101 | Issued (1/1 copies used) |
+| 102 | Riya Verma | CS102 | WAITLISTED (no copies left) |
+| 102 | Zoya Khan | CS103 | WAITLISTED (2nd in line) |
+| 105 | Karan Mehta | CS104 | Issued (1/1 copies used) |
+
+Check the **Waiting Queue** screen — Book 102 should show Riya Verma (1st)
+then Zoya Khan (2nd), in that order.
+
+## Step 4 — Return a book (demonstrate auto-issue from the Queue)
+
+- Return Book ID `102`, Roll No. `CS101` (Aman's copy)
+- Expected result: "Book returned successfully! It was automatically issued
+  to the next student in the waiting queue: Riya Verma (Roll No: CS102)"
+- Check **Waiting Queue** again — only Zoya Khan should remain for Book 102.
+- Check **Issued Books** — Riya Verma should now appear as holding Book 102.
+
+## Step 5 — Update & Delete
+
+- Update Book `104`: change Total Copies from 2 to 4.
+- Try to delete Book `105` (should FAIL — Karan Mehta still has it issued).
+- Return Book `105` from Roll No. `CS104`, then delete it again (should
+  SUCCEED this time).
+
+## Step 6 — Validation checks to demonstrate
+
+- Try adding a book with Book ID `102` again → "already exists" error.
+- Try adding a book with empty Title → validation error.
+- Try entering letters in the Book ID field → "must be a whole number" error.
+- Try issuing a non-existent Book ID `999` → "not found" error.
