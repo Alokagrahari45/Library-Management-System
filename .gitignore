@@ -1,0 +1,9 @@
+﻿*.class
+out/
+build/
+.vscode/
+.idea/
+.DS_Store
+__MACOSX/
+*.log
+*.tmp

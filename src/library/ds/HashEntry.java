@@ -3,13 +3,6 @@ package library.ds;
 import library.model.Book;
 import java.io.Serializable;
 
-/**
- * HashEntry.java
- * --------------
- * One (key, value) pair stored inside a bucket of BookHashTable.
- * Buckets are implemented as singly linked lists of HashEntry nodes,
- * this is the classic "separate chaining" collision-handling technique.
- */
 public class HashEntry implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -5,24 +5,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * BookLinkedList.java
- * -------------------
- * A custom SINGLY LINKED LIST implementation that acts as the primary
- * ("master") storage for all Book records in the library.
- *
- * WHY A LINKED LIST?
- *  - Books are added and removed frequently. A linked list gives O(1)
- *    insertion at the head/tail without shifting elements (unlike an array).
- *  - We don't need random (index-based) access to books, we mostly need to
- *    add, delete and walk through every book -> a perfect use case for a
- *    linked list.
- *  - It demonstrates the fundamental "self-referential node" data structure
- *    which is central to a Data Structures course.
- *
- * The list keeps a head and tail pointer so insertion at the end is O(1),
- * and a size counter so size() is O(1).
- */
 public class BookLinkedList implements Serializable, Iterable<Book> {
 
     private static final long serialVersionUID = 1L;
@@ -50,11 +32,6 @@ public class BookLinkedList implements Serializable, Iterable<Book> {
         size++;
     }
 
-    /**
-     * Delete the node holding the book with the given bookId.
-     * O(n) because in the worst case we must walk the whole list.
-     * Returns true if a book was found & removed.
-     */
     public boolean delete(int bookId) {
         if (head == null) return false;
 
