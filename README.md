@@ -1,42 +1,60 @@
 # 📚 Library Management System
 
-A Java-based Library Management System developed using Java Swing and Data Structures. This desktop application helps manage library operations such as book management, issuing and returning books, student validation, overdue fines, and waiting queue management.
+A desktop-based Library Management System developed using **Java and Java Swing**. This project simplifies library operations through book management, issue and return functionality, student validation, fine calculation, and waiting queue management.
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **Admin Login:** Secure admin login and dashboard.
-- **Book Management:** Add, update, delete, and view books.
-- **Search Books:** Search for books easily.
-- **Issue Books:** Issue books to registered students.
-- **Return Books:** Manage book returns.
-- **Student Validation:** Validate students before issuing books.
-- **Automatic Due Dates:** Generate due dates for issued books.
-- **Overdue Fine:** Calculate fines for overdue books.
-- **Waiting Queue:** Maintain a queue when requested books are unavailable.
-- **File Handling:** Store and manage library records.
+- 🔐 **Admin Login:** Login screen for accessing the library system.
+- 📚 **Book Management:** Add, update, delete, and view books.
+- 🔍 **Book Search:** Search books using available book information.
+- 📖 **Issue Books:** Issue books to students.
+- 🔄 **Return Books:** Manage book return operations.
+- 👨‍🎓 **Student Validation:** Validate student details during book issuing.
+- 📅 **Due Date Management:** Manage book return deadlines.
+- 💰 **Fine Calculation:** Calculate overdue fines.
+- ⏳ **Waiting Queue:** Manage students waiting for unavailable books.
+- 💾 **File Handling:** Store and retrieve library records.
 
 ## 🛠️ Technologies Used
 
 - Java
-- Java Swing
+- Java Swing (GUI)
 - Object-Oriented Programming (OOP)
 - Data Structures
-  - ArrayList
-  - LinkedList
-  - Queue (FIFO)
-  - HashMap
 - File Handling
-- Visual Studio Code
 - Git & GitHub
+- Visual Studio Code
+
+## 🧠 Data Structures Implemented
+
+This project demonstrates practical implementation of Data Structures:
+
+| Data Structure | Purpose |
+|---|---|
+| Custom Linked List | Managing book records |
+| Custom Hash Table | Efficient book searching |
+| Queue (FIFO) | Managing waiting students |
+| ArrayList | Collection management where used |
 
 ## 📂 Project Structure
 
 ```text
-Original_LMS_System/
+Library-Management-System/
+│
+├── data/
+│   └── books.dat
+│
+├── docs/
 │
 ├── src/
 │   └── library/
 │       ├── Main.java
+│       │
+│       ├── ds/
+│       │   ├── BookHashTable.java
+│       │   ├── BookLinkedList.java
+│       │   ├── BookNode.java
+│       │   └── HashEntry.java
 │       │
 │       ├── gui/
 │       │   ├── LoginScreen.java
@@ -45,7 +63,8 @@ Original_LMS_System/
 │       │   ├── SearchBookPanel.java
 │       │   ├── ViewBooksPanel.java
 │       │   ├── UpdateBookPanel.java
-│       │   └── WaitingQueuePanel.java
+│       │   ├── WaitingQueuePanel.java
+│       │   └── UITheme.java
 │       │
 │       ├── model/
 │       │   ├── Book.java
@@ -56,35 +75,43 @@ Original_LMS_System/
 │           ├── FileHandler.java
 │           └── LibraryService.java
 │
+├── .gitignore
 └── README.md
 ```
 
 ## ⚙️ Requirements
 
-- Java JDK installed
+- Java JDK
 - Visual Studio Code (recommended)
 - Java Extension Pack for VS Code
 
-## ▶️ How to Run
+## ▶️ How to Run the Project
 
-1. Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Alokagrahari45/Library-Management-System.git
 ```
 
-2. Open the project folder in VS Code.
+### 2. Open the Project
 
-3. Open the terminal in the project root directory.
+Open the cloned project folder in Visual Studio Code.
 
-4. Compile the Java files (Windows PowerShell):
+### 3. Open Terminal
+
+Open the terminal in the project root directory.
+
+### 4. Compile the Java Files
+
+For Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force out
+
 javac -d out (Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName })
 ```
 
-5. Run the application:
+### 5. Run the Application
 
 ```powershell
 java -cp out library.Main
@@ -92,11 +119,16 @@ java -cp out library.Main
 
 ## 🎯 Learning Outcomes
 
-- Practical implementation of Object-Oriented Programming.
-- Understanding and application of Data Structures.
-- Development of desktop applications using Java Swing.
-- File handling and record management.
-- Understanding real-world library management operations.
+- Understanding Object-Oriented Programming concepts.
+- Implementing custom Data Structures.
+- Understanding Linked Lists and Hash Tables.
+- Developing desktop applications using Java Swing.
+- Working with file handling and data persistence.
+- Applying programming concepts to real-world problems.
+
+## 📸 Project Screenshots
+
+Screenshots of the application will be added here.
 
 ## 👨‍💻 Developer
 
@@ -105,6 +137,8 @@ java -cp out library.Main
 B.Tech – Computer Science and Engineering
 
 Lovely Professional University
+
+**GitHub:** [Alokagrahari45](https://github.com/Alokagrahari45)
 
 ---
 
