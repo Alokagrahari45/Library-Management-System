@@ -126,10 +126,6 @@ java -cp out library.Main
 - Working with file handling and data persistence.
 - Applying programming concepts to real-world problems.
 
-## 📸 Project Screenshots
-
-Screenshots of the application will be added here.
-
 ## 👨‍💻 Developer
 
 **Alok Kumar Agrahari**
